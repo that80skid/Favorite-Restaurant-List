@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "top-5-app-c4548": {
+      "hosting": {
+        "favoriteRestaurants": [
+          "top-5-app-c4548"
+        ]
+      }
+    }
+  }
+}

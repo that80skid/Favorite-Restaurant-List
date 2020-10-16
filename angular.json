@@ -121,8 +121,16 @@
               "devServerTarget": "favoriteRestaurants:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "favoriteRestaurants"
+    }
+  },
+  "defaultProject": "favoriteRestaurants",
+  "cli": {
+    "analytics": "e7fdd2b7-ec6c-49a7-9616-1cb39437ce69"
+  }
 }
