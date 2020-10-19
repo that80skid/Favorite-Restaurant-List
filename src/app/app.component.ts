@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class AppComponent {
   title = 'favoriteRestaurants';
+  constructor(public auth: AngularFireAuth) {
+  }
+  logout() {
+    this.auth.signOut();
+  }
 }
