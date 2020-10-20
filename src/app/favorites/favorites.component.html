@@ -1,1 +1,21 @@
-<p>favorites works!</p>
+<h1>Favorite's List</h1>
+<h2>Name: </h2>
+<input [(ngModel)]="name" >
+<h2>url: </h2>
+<input [(ngModel)]="url">
+<h2>Type: </h2>
+<input [(ngModel)]="type">
+<h2>Phone Number: </h2>
+<input [(ngModel)]="phoneNumber">
+<h2>Address: </h2>
+<input [(ngModel)]="address">
+<button (click)="addFavorite()">Add</button>
+
+<div *ngFor="let favorite of favorites">
+    <h3>{{favorite.name}}</h3>
+    <h3>{{favorite.url}}</h3>
+    <h3>{{favorite.type}}</h3>
+    <h3>{{favorite.phoneNumber}}</h3>
+    <h3>{{favorite.address}}</h3>
+    <button (click)="deleteFavorite(favorite.id)">Delete</button>
+</div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 import { auth } from 'firebase/app';
 
 @Component({
@@ -8,10 +9,9 @@ import { auth } from 'firebase/app';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'favoriteRestaurants';
-  constructor(public auth: AngularFireAuth) {
-  }
+  constructor(public auth: AngularFireAuth, private router: Router) { }
+
   logout() {
-    this.auth.signOut();
+    this.auth.signOut().then(v => this.router.navigate(["/login"]));
   }
 }

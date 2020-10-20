@@ -1,5 +1,5 @@
-<button>Logout</button>
-<button routerLink="/login">Login</button>
-<button routerLink="/favoriteRestaurant">Favorite Restaurant</button>
+<button *ngIf="auth.user | async" (click)="logout()">Logout</button>
+<button *ngIf="!(auth.user | async)" routerLink="/login">Login</button>
+<button *ngIf="auth.user | async" routerLink="/favoriteRestaurant">Favorite Restaurant</button>
 <button routerLink="/">Home</button>
 <router-outlet></router-outlet>
