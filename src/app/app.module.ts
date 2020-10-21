@@ -9,7 +9,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './home/home.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +24,8 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase, 'top-5-app-c4548'),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
