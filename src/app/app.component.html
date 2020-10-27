@@ -2,4 +2,6 @@
 <button *ngIf="!(auth.user | async)" routerLink="/login">Login</button>
 <button *ngIf="auth.user | async" routerLink="/favoriteRestaurant">Favorite Restaurant</button>
 <button routerLink="/">Home</button>
+<h2>Welcome Back {{(auth.user | async)?.displayName}}</h2>
 <router-outlet></router-outlet>
+

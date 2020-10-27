@@ -5,6 +5,7 @@ import { auth } from 'firebase/app';
 import { FavoritesService } from '../services/favorites.service';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

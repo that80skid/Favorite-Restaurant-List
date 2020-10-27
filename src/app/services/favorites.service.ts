@@ -14,14 +14,13 @@ export class FavoritesService {
     });
   }
 
-  addFavorite(name: string, url: string, type: string, phoneNumber: number,  address: string) {
+  addFavorite(name: string, url: string, type: string, phoneNumber: number) {
     this.afs.collection('favorites').add({
       userId: this.userID,
       name: name,
       url: url,
       type: type,
-      phoneNumber: phoneNumber,
-      address: address
+      phoneNumber: phoneNumber
     })
   }
 

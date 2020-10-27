@@ -1,10 +1,11 @@
+<p>list works!</p>
 <h1>Favorite's List</h1>
 <h2>Name: <input [(ngModel)]="name"></h2>
 <h2>Type: <input [(ngModel)]="type"></h2>
 <button (click)="addFavorite()">Add</button>
 
 <div *ngFor="let favorite of favorites">
-    <h3>{{favorite.name}}</h3>
-    <h3>{{favorite.type}}</h3>
-    <button (click)="deleteFavorite(favorite.id)">Delete</button>
+    <h3>{{name}}</h3>
+    <h3>{{type}}</h3>
+    <button (click)="deleteFavorite()">Delete</button>
 </div>
