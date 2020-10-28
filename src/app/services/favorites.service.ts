@@ -15,7 +15,7 @@ export class FavoritesService {
   }
 
   addFavorite(name: string, url: string, type: string, phoneNumber: number) {
-    this.afs.collection('favorites').add({
+    this.afs.collection('restaurants').add({
       userId: this.userID,
       name: name,
       url: url,
@@ -25,6 +25,6 @@ export class FavoritesService {
   }
 
   deleteFavorite(id) {
-    this.afs.collection('favorites').doc(id).delete();
+    this.afs.collection('restaurants').doc(id).delete();
   }
 }
